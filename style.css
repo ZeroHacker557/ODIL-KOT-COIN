@@ -1,0 +1,94 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#title {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#game {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    border: 2px solid #000;
+    background-color: #fff;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#coin {
+    width: 300px;
+    height: 300px;
+    cursor: pointer;
+    position: absolute;
+    z-index: 10;
+}
+
+#score {
+    margin-top: 20px;
+    font-size: 24px;
+}
+
+#kot {
+    position: absolute;
+    font-size: 30px;
+    color: red;
+    transition: opacity 1s ease-out;
+    z-index: 5;
+}
+
+#bonus {
+    position: absolute;
+    transition: opacity 1s ease-out;
+    z-index: 15;
+}
+
+#bonus img {
+    width: 200px;
+    height: 200px;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+#withdraw {
+    position: fixed;
+    bottom: 20px;
+    text-align: center;
+}
+
+#withdraw input {
+    padding: 8px;
+    margin-bottom: 8px;
+    font-size: 16px;
+    display: block;
+    width: 100%;
+}
+
+#withdraw-btn {
+    padding: 8px 16px;
+    font-size: 16px;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+}
+
+#withdraw-message {
+    color: red;
+    font-size: 16px;
+    margin-top: 8px;
+}

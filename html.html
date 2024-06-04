@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coin Clicker Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 id="title">Odil Kot bilan pul ishlang</h1>
+    <h2 id="title">10 martta bosing va yutuqni oling!</h2>
+    <div id="game">
+        <img id="coin" src="coin-image.png" alt="Coin">
+        <div id="bonus" class="hidden">
+            <img id="bonus-image" src="bonus-image.png" alt="Bonus">
+        </div>
+    </div>
+    <div id="score">Score: 0</div>
+    <div id="kot" class="hidden">KOT</div>
+    <audio id="bonus-sound" src="bonus-sound.mp3"></audio>
+    <div id="withdraw">
+        <input type="number" id="withdraw-amount" placeholder="Visa kartangizni kiriting">
+        <button id="withdraw-btn">Mablag'ni chiqarish</button>
+        <div id="withdraw-message" class="hidden">Sizda mablag' yetarli emas, maksimal coinlar 1 million bo'lishi kerak!</div>
+    </div>
+    
+    <script src="script.js"></script>
+    <script>
+        let score = 0;
+        const coin = document.getElementById('coin');
+        const message = document.getElementById('message');
+        const audio = document.getElementById('audio');
+
+        coin.addEventListener('click', () => {
+            score++;
+            message.innerText = `Sizning ballaringiz: ${score}`;
+            if (score % 10 === 0) {
+                audio.play();
+            }
+        });
+    </script>
+    
+</body>
+</html>
